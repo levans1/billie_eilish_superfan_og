@@ -15,20 +15,20 @@ var c=0
 // variables for the if then
 
 function changeImage(elem){
-if (document.getElementById == "col1") {
+if (elem.id == "col1") {
   document.getElementById("col1").src="images/album2.jpg";
 	a=1;
 	confettiCheck();
 	console.log("run function 1");
 }
-else if (document.getElementById == "col2") {
+else if (elem.id == "col2") {
   document.getElementById("col2").src="images/party.gif"
 	document.getElementById("party").play();
 	b=1;
 	confettiCheck(); // the confetti check function is here to check if it is ready to show the confetti yet but it won't until all of them are complete
 	console.log("run function 2");
  }
- else if (document.getElementById == "col3") {
+ else if (elem.id == "col3") {
   document.getElementById("col3").src="images/spotify.jpg";
 	c=1;
 	confettiCheck();
