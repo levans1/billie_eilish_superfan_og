@@ -13,32 +13,36 @@ var a=0
 var b=0
 var c=0
 // variables for the if then
+
 function changeImage(elem){
-	document.getElementById("col1").src="images/album2.jpg";
+if (elem.id == "col1") {
+  document.getElementById("col1").src="images/album2.jpg";
 	a=1;
 	confettiCheck();
 	console.log("run function 1");
 }
-function goGif(elem){
-	document.getElementById("col2").src="images/party.gif"
+else if (elem.id == "col2") {
+  document.getElementById("col2").src="images/party.gif"
 	document.getElementById("party").play();
-	b=1
+	b=1;
 	confettiCheck(); // the confetti check function is here to check if it is ready to show the confetti yet but it won't until all of them are complete
 	console.log("run function 2");
-}
-function switchImage(elem){
-	document.getElementById("col3").src="images/spotify.jpg";
-	c=1
+ }
+ else if (elem.id == "col3") {
+  document.getElementById("col3").src="images/spotify.jpg";
+	c=1;
 	confettiCheck();
 	console.log("run function 3");
-}
+ }
+} 
+
 function confettiCheck(){
-	if (a==1 && b==1 && c==1) // the if is saying that if a, b, c =1 then the other functions have completed and now it is able to display the confetti
-	{
+	if (a==1 && b==1 && c==1) { // the if is saying that if a, b, c =1 then the other functions have completed and now it is able to display the confetti
 		document.getElementById("confetti").style.display="block";
 	}
 	console.log("run function 4");
 }
+
 function removeConfetti(elem){
 	document.getElementById("confetti").style.display="none";
 	document.getElementById("col1").src="images/fader.jpg";
