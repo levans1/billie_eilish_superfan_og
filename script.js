@@ -40,10 +40,10 @@ function confettiCheck(){
 	console.log("run function 4");
 }
 function removeConfetti(elem){
-	document.getElementById("confetti").style.display="none";
+if (document.ElementById("confetti").style.display="none";)
+{
 	document.getElementById("col1").src="images/fader.jpg";
 	document.getElementById("col2").src="images/bluecoat.gif";
 	document.getElementById("col3").src="images/green-min.png";
 	console.log("run function 5");
-	// this function is an on click that removes the confetti and then changes the images so that they are hoverable and new so it is adding something new and cool and not just removing a previous class
 }
