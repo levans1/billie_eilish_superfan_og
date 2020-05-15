@@ -47,3 +47,4 @@ if (document.ElementById("confetti").style.display="none")
 	document.getElementById("col3").src="images/green-min.png";
 	console.log("run function 5");
 }
+}
