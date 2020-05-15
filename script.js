@@ -12,24 +12,28 @@
 var a=0
 var b=0
 var c=0
+var col1=document.getElementById("col1")
+var col2= document.getElementById("col2")
+var col3=document.getElementById("col3")
+var confetti=document.getElementById("confetti")
 // variables for the if then
 
 function changeImage(elem){
 if (elem.id == "col1") {
-  document.getElementById("col1").src="images/album2.jpg";
+ col1.src="images/album2.jpg";
 	a=1;
 	confettiCheck();
 	console.log("run function 1");
 }
 else if (elem.id == "col2") {
-  document.getElementById("col2").src="images/party.gif"
+ col2.src="images/party.gif"
 	document.getElementById("party").play();
 	b=1;
 	confettiCheck(); // the confetti check function is here to check if it is ready to show the confetti yet but it won't until all of them are complete
 	console.log("run function 2");
  }
  else if (elem.id == "col3") {
-  document.getElementById("col3").src="images/spotify.jpg";
+  col3.src="images/spotify.jpg";
 	c=1;
 	confettiCheck();
 	console.log("run function 3");
@@ -38,16 +42,16 @@ else if (elem.id == "col2") {
 
 function confettiCheck(){
 	if (a==1 && b==1 && c==1) { // the if is saying that if a, b, c =1 then the other functions have completed and now it is able to display the confetti
-		document.getElementById("confetti").style.display="block";
+		confetti.style.display="block";
 	}
 	console.log("run function 4");
 }
 
 function removeConfetti(elem){
-	document.getElementById("confetti").style.display="none";
-	document.getElementById("col1").src="images/fader.jpg";
-	document.getElementById("col2").src="images/bluecoat.gif";
-	document.getElementById("col3").src="images/green-min.png";
+	confetti.style.display="none";
+	col1.src="images/fader.jpg";
+	col2.src="images/bluecoat.gif";
+	col3.src="images/green-min.png";
 	console.log("run function 5");
 	// this function is an on click that removes the confetti and then changes the images so that they are hoverable and new so it is adding something new and cool and not just removing a previous class
 }
