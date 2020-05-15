@@ -40,11 +40,9 @@ function confettiCheck(){
 	console.log("run function 4");
 }
 function removeConfetti(elem){
-//	if (document.ElementById("confetti").style.display="none")
-//	{
+        document.ElementById("confetti").style.display="none";
 	document.getElementById("col1").src="images/fader.jpg";
 	document.getElementById("col2").src="images/bluecoat.gif";
 	document.getElementById("col3").src="images/green-min.png";
-//	}
 	console.log("run function 5");
 }
